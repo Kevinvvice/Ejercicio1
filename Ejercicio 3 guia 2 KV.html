@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 guia 2 KV</title>
+</head>
+<body>
+    <script>
+        let usuario = prompt('Ingrese el nombre de usuario:');
+        let correo = prompt("Ingrese su correo electronico"); 
+        let errores = "";
+        if (usuario.length == 0){
+            errores +="Tiene que ingresar el nombre de usuario \n"
+        } 
+        if (correo.length == 0){
+            errores +="Tiene que ingresar su correo"
+        }
+        if (errores.length >0){
+            alert("Corrija los siguientes errores:\n"+errores)
+        }else{
+
+            document.write("Nombre de usuario: "+usuario+"<br>"+"Correo:"+correo)
+        }
+
+            
+        
+             
+        
+        
+            
+            
+       
+            
+        
+        
+    
+        
+    </script> 
+</body>
+</html>
