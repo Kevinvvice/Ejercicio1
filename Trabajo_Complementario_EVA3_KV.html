@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complemento eva3 KV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        #barra{float: right; }
+    </style>
+  </head>
+  <body> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <div class="card">
+                    <div class="card-title"> 
+                        <h4 class="text-left.">Ingreso</h4> 
+                        <div class="nav" id="barra">
+                            <h4 Class="text.righ">Total recaudado</h4> 
+                        </div>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto"> 
+                            <form action="">
+                                    <label for="">Patente<input type="text" id="pat" class="form-control"></label>
+                                    <button type="submit" class="btn btn-primary" onclick="Calculo()">Registrar Ingreso</button>
+                            </form>
+                            </div>
+                              </span>
+                            </div>
+                          </div>
+                        <h4 Class="text-righ.">Registros</h4> 
+                        <table class="table table-bordered border-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">Fecha/Hora/Salida</th>
+                                <th scope="col">Patente</th>
+                                <th scope="col">Monto a Pagar</th>
+                                <th scope="col">Acción</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="col">Fecha/Hora/Salida</th>
+                                <td scope="col">Patente</th>
+                                <td scope="col">Monto a Pagar</th>
+                                <td><button type="button" class="btn btn-primary">Salida</button></td>
+                              </tr>
+                              <tr>
+                                <td scope="col">Fecha/Hora/Salida</th>
+                                <td scope="col">Patentesss</th>
+                                <td scope="col">Monto a Pagar</th>
+                                <td><button type="button" class="btn btn-primary">Salida</button></td>
+                              </tr>
+                              <tr>
+                                <td scope="col">Fecha/Hora/Salida</th>
+                                <td scope="col">Patente</th>
+                                <td scope="col">Monto a Pagar</th>
+                                <td><button type="button" class="btn btn-primary">Salida</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        <div class="d-flex justify-content-end">
+                        </div>
+                    </div>                                        
+                </div>
+            </div>
+        </div>  
+        <script>
+            function Calculo(){
+                var patente = document.getElementById("pat").value; 
+                var errores = "";
+                if (patente.length > 8){ 
+                    errores += "-El numero de patente se excede del formato, ingrese nuevamente \n";
+                } 
+                if (patente == 0){
+                    errores += "-Tiene que ingresar un numero de patente \n";
+                } 
+                if (errores.length > 0){
+                  alert("_corrija los siguientes errores: \n"+errores);
+                }
+
+                 
+
+            }
+        </script> 
+      </body>
+</html>
